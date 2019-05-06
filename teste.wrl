@@ -1,0 +1,37 @@
+#VRML V2.0 utf8 
+ 
+ Group { 
+  children [ 
+      Transform { 
+             children Shape { 
+                   appearance NULL 
+                   geometry IndexedFaceSet { 
+                              coord Coordinate { 
+                                    point       [ -2 -2 0,   # Vertice 0 
+                                                      0 -2 0,   # Vertice 1 
+                                                      0 -2 -2,    # Vertice 2 
+                                                    -2 -2 -2,    # Vertice 3 
+                                                      -1 3 -1 ]   # Vertice 4 
+                              } 
+                               color Color { 
+                                     color       [ 1 0 0,   # Cor (vermelho) para a face 0 
+                                                      0 1 0,   # Cor (verde) para a face 1 
+                                                      0 0 1,   # Cor (azul) para a face 2 
+                                                      1 1 0,   # Cor (amarelo) para a face 3 
+                                                      0 1 1 ]  # Cor (cyan) para a face 4 (base) 
+                              } 
+   # Note que o maior indice = 4, logo, deve haver 5 pontos em point 
+   # O indice "-1" indica que o conj. de vertices precendes forma uma face, ou seja, o indice "-1" serve como um separador de faces 
+          coordIndex    [ 0, 1, 4, -1,    # Face 0: lado 
+                          1, 2, 4, -1,    # Face 1: lado 
+                          2, 3, 4, -1,    # Face 2: lado 
+                          3, 0, 4, -1,    # Face 3: lado 
+                       3, 2, 1, 0, -1 ]   # Face 4: base 
+   normal NULL 
+   texCoord NULL 
+         colorPerVertex        FALSE      # Colorir "por face" 
+ } 
+      } 
+    } 
+  ] 
+} 
